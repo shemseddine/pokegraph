@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode development && webpack-dev-server --mode development --open"
+    "build": "webpack --config webpack.prod.config.js",
+    "dev": "webpack --mode development && webpack-dev-server --mode development --open",
+    "start": "npm run build && NODE_ENV=production node server.js"
   },
   "keywords": [
     "react",
@@ -17,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-boost": "^0.1.12",
+    "express": "^4.16.3",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "react": "^16.4.2",
