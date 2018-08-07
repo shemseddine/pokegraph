@@ -43,5 +43,9 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    inline: true,
+    port: process.env.PORT || 3000
+  },
   plugins: [htmlWebpackPlugin]
 };
